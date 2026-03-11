@@ -39,6 +39,8 @@ New-Item -ItemType Directory -Force -Path "$env:APPDATA\MiKTeX\tex\latex\protoko
 Copy-Item protokoll -Destination "$env:APPDATA\MiKTeX\tex\latex\protokoll\" -Recurse
 ```
 
+Then just copy the `protokoll.tex` file to your project and start writing.
+
 ### Mac
 
 Run the following command in your terminal from this directory:
