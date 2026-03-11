@@ -5,8 +5,8 @@ Because I have better things to do, for now, the only template language is
 German.
 
 > [!NOTE]
-> This template has only been tested on Linux. It should work, though
-> installation paths and commands may vary.
+> This template has only been tested on Linux. It should work on Mac and Windows
+> too, though installation paths and commands may vary.
 
 ## Installation
 
