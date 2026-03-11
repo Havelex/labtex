@@ -160,6 +160,6 @@ specifier `S` to declare a column to be `siunitx` compatible cells:
 > [!NOTE]
 > The specifier `S` allows you to simply write plaintext numbers into the cells
 > and `siunitx` will parse them.
-
+>
 > Furthermore, the first row is always text, regardless of the modifier, since
 > it acts as headers.
