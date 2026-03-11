@@ -163,3 +163,6 @@ specifier `S` to declare a column to be `siunitx` compatible cells:
 >
 > Furthermore, the first row is always text, regardless of the modifier, since
 > it acts as headers.
+
+> [!TIP]
+> The full manual for `siunitx` can be found [here](https://mirror.kumi.systems/ctan/macros/latex/contrib/siunitx/siunitx.pdf)
