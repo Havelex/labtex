@@ -32,7 +32,7 @@ xcopy protokoll "%APPDATA%\MiKTeX\tex\latex\protokoll\" /E /I
 
 _OR_
 
-run the following command in your **PowerShell** from this directory:
+run the following command in **PowerShell** from this directory:
 
 ```bash
 New-Item -ItemType Directory -Force -Path "$env:APPDATA\MiKTeX\tex\latex\protokoll"
