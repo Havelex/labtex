@@ -1,0 +1,206 @@
+% LTeX: language=de-DE
+% ============================================================
+%  Mein Protokoll – nur diese Datei bearbeiten!
+%  protokoll.cls muss installiert sein (~/texmf/tex/latex/protokoll/)
+% ============================================================
+\documentclass{protokoll}
+\addbibresource{refs.bib}
+
+% ── Metadaten ────────────────────────────────────────────────
+\ueNum{1}
+\group{12}
+\ueTitle{Bestimmung eines elektrischen Widerstandes}
+\supervisor{Dr. Schultze-Bernhardt}
+\ueDate{09.03.2026}
+\semester{SS 2026}
+
+\authorOne{Maximilian}{Lamprecht}{12129644}
+\authorTwo{Manuel}{Lazian}{12524036}   % weglassen bei Einzelprotokoll
+
+% ── Dokument ─────────────────────────────────────────────────
+\begin{document}
+\maketitle
+
+\section{Aufgabenstellung}
+
+In diesem Versuch soll der elektrische Widerstand eines zur Verfügung
+gestellten Resistors, mittels eines Multimeters. Anschließend wird das
+Messergebnis mit den Angaben des Herstellers verglichen.
+
+\section{Voraussetzungen und Grundlagen}
+
+Der Farbcode des Resistors muss ausgewertet werden, um die Herstellerangaben zu
+Widerstand und Unsicherheiten herauszufinden. Dabei wurde der Farbcode des
+Resistors wie folgt von rechts nach links abgelesen (siehe Abbildung
+\ref{fig:resistor1}):
+
+\begin{itemize}
+    \item Braun
+    \item Schwarz
+    \item Schwarz
+    \item Violet
+    \item Gelb
+\end{itemize}
+
+\begin{figure}[H]
+    \includegraphics[width=0.7\linewidth]{figs/resistor}
+    \centering
+    \caption{Resistor eingespannt in Bananenstecker. (Gelb links)}
+    \label{fig:resistor1}
+\end{figure}
+
+In diesem Fall hat der Resistor laut Hersteller einen Wiederstand von
+\qty{470}{\ohm} mit einer relativen unsiherheit von \qty{+-1}{\percent}
+angegeben. Eine Temperaturkoeffizient ist jedoch nicht angegeben. \\
+
+Dieser Wert wurde mithilfe der Farbcodetabelle aus Abbildung
+\ref{fig:color_codes} ermittelt.
+
+\begin{figure}[H]
+    \includegraphics[width=0.7\linewidth]{figs/color_codes.png}
+    \centering
+    \caption{Tabelle für Farbcodes von Wiederständen \cite{res_color_codes}}
+    \label{fig:color_codes}
+\end{figure}
+
+Für die Auswertung am Ende wird folgende Formel zur Berechnung der Typ B
+Unsicherheit benötigt:
+
+\begin{equation}
+    \Delta I = I\cdot \mathrm{x}\,\unit{\percent} + \mathrm{y}\,\unit{digits}
+    \label{eq:res_error}
+\end{equation}
+
+Wobei $\Delta I$ den absoluten Messfehler ist und $I$ sich auf den gemessenen
+Wert bezieht. $x$ ist der relative Fehler und $y$ ist die anzahl an Stellen
+welche, laut Hersteller, zum absoluten Fehler dazugerechnet werden. In diesem
+Fall misst das Gerät maximal eine Nachkommastelle.
+
+Somit ergiebt sich für das Messergebnis $\bar{I}$ mit expliziter absoluter
+Unsicherheit folgende Formel:
+
+\begin{equation}
+    \bar{I} = I \pm \Delta I
+    \label{eq:res_ex_abs}
+\end{equation}
+
+\section{Beschreibung der Versuchsanordnung}
+
+Die Enden des Resistors werden jeweils in die Schraublöcher der Bananenstecker
+eingespannt. Die Bananenstecker werden dann in die Löcher des Multimeters
+(Abbildung \ref{fig:multimeter1}), beschriftet mit \textbf{COM} und
+\textbf{V\, \textohm\, \textdegree C}, gesteckt.
+
+\section{Geräteliste}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=300pt]{figs/multimeter1}
+    \caption{Mulimeter}
+    \label{fig:multimeter1}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | l | l | l | l | l | l |}
+        \hline
+        {Gerät} & {Hersteller} & {Modell} & {InventarNr.} & {Resolution} &
+        {Unsicherheit} \\
+        \hline\hline
+        Multimeter & TE.ELECTRONIC & VA18B & 0109708 & \qty{0.1}{\ohm} &
+        $\pm\,($\qty{0.5}{\percent} + \qty{1}{digit(s)}$)$ \\
+        \hline
+    \end{tabular}
+    \caption{Im Versuch verwendete Geräte und Utensilien.}
+    \label{tab:devices}
+\end{table}
+
+\section{Versuchsdurchführung und Messergebnisse}
+
+Zur Durchführung des Versuches wird das Multimeter auf \textbf{\textohm}, zur
+Wiederstandsmessung eingestellt. Dann wird der die digitale Anzeige beobachtet,
+bis sich der Wert beruight hat, sodass ein Ergebnis abgelesen wird. Da der
+Wert trotzdem im \textit{digit} Bereich fluktuiert, wird der Mittelwert von
+Minimum und Maximum genommen und die die Hälfte der Differenz als absolute
+Unsicherheit. In diesem Fall ist der Wert zufälligerweise gleich dem Modus.
+
+Dieser Prozess wird dann wiederholt, wobei die Einspannung des Resistors
+umgekehrt in das Multimeter gesteckt wird, um zu validieren, dass der
+Wiederstand in beide Stromflussrichtungen gleich startk ist. Wie in Tabelle
+\ref{tab:measurements} zu sehen, ist dies der Fall.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | S | S |}
+        \hline
+        {Messung} & {Messwert / \unit\ohm} & {Unsicherheit / \unit\ohm} \\
+        \hline\hline
+        Wiederstand (Braun\, \textrightarrow\, COM) & 468.5 & +-0.1 \\
+        \hline
+        Wiederstand (Gelb\, \textrightarrow\, COM) & 468.5 & +-0.1 \\
+        \hline
+    \end{tabular}
+    \caption{Messergebnisse}
+    \label{tab:measurements}
+\end{table}
+
+\section{Auswertung}
+
+Da das Multimeter bereits die gewünschte Größe, in diesem Fall den Wiederstand,
+misst, muss nur noch die Typ B unsicherheit ausgerechnet werden. Dazu wird der
+Messwert $I$ erst in Formel \ref{eq:res_error} eingesetzt und $\mathrm{x}$ und
+$\mathrm{y}$ werden den Angaben des Herstellers des Multimeters nach angepasst.
+In diesem Fall sind, bis \qty{60}{\Mohm}, $\mathrm{x}=\,$\qty{0.5}{\percent}
+und $\mathrm{y}=\,$\qty{1}{\unit{digit}}. Daraus ergibt sich mit einer Auflösung
+von \qty{0.1}{\ohm} und dem Messwert $I$ durch einsetzen der in Formel
+\ref{eq:res_error} für den absoluten Fehler:
+
+\begin{equation*}
+    \Delta I = (\num{2.2325} + \num{0.1})\,\unit\ohm \approx \qty{2.3}{\ohm}
+\end{equation*}
+
+Da die Unsicherheit durch Fluktuationen viel geringer ist als die Typ B
+Unsicherheit, wird diese vernachlässigt. Des weiteren, da beide Messwerte
+inklusive deren Fluktuationsunsicherheiten identisch sind, wird der finale Wert
+$\bar{I}$ nur einmal ausgerechnet.
+
+Somit lautet das finale Ergebnis der Messung:
+
+\begin{equation*}
+    \uuline{\bar{I} = \qty{468.5(2.3)}{\ohm}}
+\end{equation*}
+
+\section{Diskussion}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | S | S |}
+        \hline
+        Größe & {Herstellerwert / \unit\ohm} & {Messergebnis / \unit\ohm} \\
+        \hline\hline
+        $I$ & 470(5) & 468.5(2.3) \\
+        \hline
+    \end{tabular}
+    \caption{Vergleich: Herstellerangaben vs Messergebnis}
+    \label{tab:comparison}
+\end{table}
+
+Die Angaben des Herstellers des Resistors besagen, dass dieser eine maximale
+Unsicherheit von \qty{+-1}{\percent} aufweist. Bei \qty{470}{\ohm} beträgt diese
+\qty{+-4.7}{\ohm}. Damit liegt das Messergebnis mit \qty{468.5(2.4)}{\ohm}
+innerhalb des vom Hersteller angegebenen Konfidenzintervalls.
+
+\section{Zusammenfassung}
+
+In diesem Experiment wurde der elektrische Wiederstand eines Resistors gemessen.
+Der Resistor is mit \qty{470}{\ohm} \qty{+-1}{\percent} bzw. \qty{470(5)}{\ohm}.
+Das Messergebnis liegt somit mit \qty{468.5(2.3)}{\ohm} innerhalb der Angaben
+des Herstellers.
+
+\pagebreak
+\section{Literatur}
+
+\nocite{*}
+\printbibliography
+
+\end{document}
