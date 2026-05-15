@@ -1,9 +1,0 @@
-/home/runner/work/labtex/labtex/game/target/debug/deps/bevy_diagnostic-1b0c98957b639371.d: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/lib.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/diagnostic.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/entity_count_diagnostics_plugin.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/frame_time_diagnostics_plugin.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/log_diagnostics_plugin.rs
-
-/home/runner/work/labtex/labtex/game/target/debug/deps/libbevy_diagnostic-1b0c98957b639371.rmeta: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/lib.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/diagnostic.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/entity_count_diagnostics_plugin.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/frame_time_diagnostics_plugin.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/log_diagnostics_plugin.rs
-
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/lib.rs:
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/diagnostic.rs:
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/entity_count_diagnostics_plugin.rs:
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/frame_time_diagnostics_plugin.rs:
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_diagnostic-0.14.2/src/log_diagnostics_plugin.rs:
