@@ -169,13 +169,13 @@ specifier `S` to declare a column to be `siunitx` compatible cells:
 
 ## Experimental Game Prototype (M1)
 
-This repository now also contains an isolated Rust prototype at
-`/home/runner/work/labtex/labtex/game` for a modular 3D roguelite milestone.
+This repository now also contains an isolated Rust prototype at `game/` for a
+modular 3D roguelite milestone.
 
 ### Run
 
 ```bash
-cd /home/runner/work/labtex/labtex/game
+cd game
 cargo run
 ```
 
