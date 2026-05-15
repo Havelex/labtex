@@ -166,3 +166,22 @@ specifier `S` to declare a column to be `siunitx` compatible cells:
 
 > [!TIP]
 > The full manual for `siunitx` can be found [here](https://mirror.kumi.systems/ctan/macros/latex/contrib/siunitx/siunitx.pdf)
+
+## Experimental Game Prototype (M1)
+
+This repository now also contains an isolated Rust prototype at
+`/home/runner/work/labtex/labtex/game` for a modular 3D roguelite milestone.
+
+### Run
+
+```bash
+cd /home/runner/work/labtex/labtex/game
+cargo run
+```
+
+### Controls
+
+- `WASD`: move
+- Mouse: look
+- `E`: run accelerator (when close enough)
+- `Esc`: toggle mouse lock
